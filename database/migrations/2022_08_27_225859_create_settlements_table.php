@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('key');
             $table->string('name');
             $table->string('zone_type');
-            $table->bigInteger('settlement_type_id');
-            $table->bigInteger('municipality_id');
-            $table->bigInteger('zip_code_id');
+            $table->bigInteger('settlement_type_id')->index();
+            $table->bigInteger('municipality_id')->index();
+            $table->bigInteger('zip_code_id')->index();
             $table->timestamps();
         });
     }
