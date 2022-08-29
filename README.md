@@ -25,7 +25,7 @@ Para el desarrollo tome como referencia el libro de Martin Joo sobre DDD en lara
 <a name="structure"></a>
 ### Estructura del proyecto
 
-Las archivos importantes a tener en cuenta
+Las archivos importantes a tener en cuenta son:
 
 ```
 app
@@ -105,9 +105,12 @@ Instalar las dependencias:
 
 `composer install`
 
-levantar el proyecto:
+Levantar el proyecto con Laravel Sail:
 
 `sail up -d`
+
+> **Importante: Para levantar el proyecto debe tener instalado previamente docker en su entorno local.**
+
 
 Correr las migraciones
 
