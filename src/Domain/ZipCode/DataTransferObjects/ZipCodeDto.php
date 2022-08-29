@@ -45,29 +45,21 @@ class ZipCodeDto extends Data
 
     public static function zipcode($id)
     {
-        return Cache::remember('zip_codes', 1, function () use ($id) {
-            return DB::table('zip_codes')->where('zip_code', $id)->first();
-        });
+        return DB::table('zip_codes')->where('zip_code', $id)->first();
     }
 
     public static function entity($zipcode)
     {
-        return Cache::remember('federal_entities', 1, function () use ($zipcode) {
-            return DB::table('federal_entities')->find($zipcode->federal_entity_id);
-        });
+        return DB::table('federal_entities')->find($zipcode->federal_entity_id);
     }
 
     public static function settlements($zipcode)
     {
-        return Cache::remember('settlements', 1, function () use ($zipcode) {
-            return DB::table('settlements')->where('zip_code_id', $zipcode->id)->get();
-        });
+        return DB::table('settlements')->where('zip_code_id', $zipcode->id)->get();
     }
 
     public static function municipality($settlements)
     {
-        return Cache::remember('municipalities', 1, function () use ($settlements) {
-            return DB::table('municipalities')->find($settlements[0]->municipality_id);
-        });
+        return DB::table('municipalities')->find($settlements[0]->municipality_id);
     }
 }
