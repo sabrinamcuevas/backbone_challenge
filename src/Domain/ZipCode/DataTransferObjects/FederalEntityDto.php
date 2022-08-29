@@ -17,9 +17,9 @@ class FederalEntityDto extends Data
     public static function fromModel($data): self
     {
         return new self(
-            $data['key'],
-            $data['name'],
-            $data['code'],
+            $data->key,
+            $data->name,
+            $data->code,
         );
     }
 }

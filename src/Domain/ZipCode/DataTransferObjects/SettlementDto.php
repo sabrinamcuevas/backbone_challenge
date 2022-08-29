@@ -18,11 +18,11 @@ class SettlementDto extends Data
 
     public static function fromModel($data): self
     {
-        $settlement_type = SettlementType::find($data['settlement_type_id']);
+        $settlement_type = SettlementType::find($data->settlement_type_id);
         return new self(
-            $data['key'],
-            $data['name'],
-            $data['zone_type'],
+            $data->key,
+            $data->name,
+            $data->zone_type,
             SettlementTypeDto::fromModel($settlement_type)
         );
     }
