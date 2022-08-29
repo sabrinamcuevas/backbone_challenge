@@ -14,7 +14,7 @@
 El challenge fue desarrollado con **Laravel Sail (v8)** para contar con un entorno
 de desarrollo Docker predeterminado de Laravel. Además Laravel Sail es compatible con macOS, Linux y Windows.
 
-Las librerias que se usaron :
+Las librerias que se usaron en este proyecto son:
 
 * **Laravel Excel** para procesar el archivo excel proporcionado [aquí](https://www.correosdemexico.gob.mx/SSLServicios/ConsultaCP/CodigoPostal_Exportar.aspx)
 
