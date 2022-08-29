@@ -14,6 +14,7 @@ class SettlementTypeDto extends Data
 
     public static function fromModel($data): self
     {
+
         return new self(
             $data->name
         );

@@ -31,7 +31,7 @@ class ZipcodesImport implements ToModel, WithStartRow, WithBatchInserts, WithChu
             'federal_entity_id' => $federal_entity->id
         ]);
 
-        $settlement_type = SettlementType::updateOrCreate([
+        SettlementType::updateOrCreate([
             'name' => $row[2]
         ]);
 
@@ -39,6 +39,8 @@ class ZipcodesImport implements ToModel, WithStartRow, WithBatchInserts, WithChu
             'key' => $row[11],
             'name' => Str::upper($row[3])
         ]);
+
+        $settlement_type = SettlementType::where('name', $row[2])->first();
 
         return new Settlement([
             'key' => $row[12],
@@ -71,7 +73,7 @@ class ZipcodesImport implements ToModel, WithStartRow, WithBatchInserts, WithChu
 
     public function batchSize(): int
     {
-        return 500;
+        return 1000;
     }
 
 }

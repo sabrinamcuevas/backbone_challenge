@@ -32,7 +32,7 @@ class ImportExcelCommand extends Command
      */
     public function handle()
     {
-        $path = Storage::path('Ciudad de México.xls');
+        $path = Storage::path('CPdescarga.xls');
         $this->output->title('*************** Starting import *****************+');
         Excel::import(new MainImport, $path);
         $this->output->success('Import successful');

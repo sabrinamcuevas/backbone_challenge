@@ -2,7 +2,6 @@
 
 namespace Domain\ZipCode\DataTransferObjects;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Spatie\LaravelData\Data;
 
@@ -19,9 +18,8 @@ class SettlementDto extends Data
 
     public static function fromModel($data): self
     {
-        $settlement_type = Cache::remember('settlement_types', 10, function () use ($data) {
-            return DB::table('settlement_types')->find($data->settlement_type_id);
-        });
+        $settlement_type = DB::table('settlement_types')->find($data->settlement_type_id);
+
         return new self(
             $data->key,
             $data->name,

@@ -116,7 +116,7 @@ Correr las migraciones
 
 `sail artisan migrate`
 
-Importar los datos del excel "Ciudad de México.xls" guardo en: "storage/app/public" con el comando:
+Importar los datos del excel "CPdescarga.xls" guardo en: "storage/app/public" con el comando:
 
 `sail artisan import:excel`
 
