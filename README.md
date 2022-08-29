@@ -1,26 +1,37 @@
 # Backbone Challenge </em>
 
 ## Tabla de contenido
+---
 1. [Información General](#general-info)
 2. [Estructura del proyecto](#structure)
 3. [Instalación](#installation)
 4. [Referencias](#references)
-
+---
 
 
 <a name="general-info"></a>
 ### Información General
 
-El challenge fue desarrollado con **Laravel Sail (v8)** para contar con un entorno
+El challenge fue desarrollado con **Laravel Sail**  para contar con un entorno
 de desarrollo Docker predeterminado de Laravel. Además Laravel Sail es compatible con macOS, Linux y Windows.
 
 Las librerias que se usaron en este proyecto son:
 
 * **Laravel Excel** para procesar el archivo excel proporcionado [aquí](https://www.correosdemexico.gob.mx/SSLServicios/ConsultaCP/CodigoPostal_Exportar.aspx)
 
-* **Laravel Data (v1)** es un paquete que permite la creacion de objetos de datos enriquecidos.
+* **Laravel Data** es un paquete que permite la creacion de objetos de datos enriquecidos.
 
-Para el desarrollo tome como referencia el libro de Martin Joo sobre DDD en laravel.
+Para el desarrollo tome como referencia el libro de Martin Joo sobre DDD en laravel (adjunto link al libro en referencias).
+
+PHP: ![](https://img.shields.io/badge/PHP-8.0.2-brightgreen)
+
+Laravel: ![](https://img.shields.io/badge/Laravel-9-orange) 
+
+Laravel Excel: ![](https://img.shields.io/badge/Laravel%20Excel-3.1-brightgreen)
+
+Laravel-data: ![](https://img.shields.io/badge/Laravel%20-V1-red)
+
+---
 
 <a name="structure"></a>
 ### Estructura del proyecto
@@ -93,6 +104,7 @@ tests
 ├── TestCase.php
 └── Unit
 ```
+---
 
 <a name="installation"></a>
 ### Instalación
@@ -109,7 +121,7 @@ Levantar el proyecto con Laravel Sail:
 
 `sail up -d`
 
-> **Importante: Para levantar el proyecto debe tener instalado previamente docker en su entorno local.**
+> **Importante: Para levantar el proyecto con Laravel Sail debe tener instalado previamente docker en su entorno local. En caso contrario puede correr los mismos comando con php artisan**
 
 
 Correr las migraciones
@@ -132,15 +144,17 @@ Para probar los tests
 
 `sail artisan test`
 
+---
+
 <a name="references"></a>
 ### Referencias
-https://domain-driven-design-laravel.com/
+- https://domain-driven-design-laravel.com/
 
-https://laravel.com/docs/8.x/sail
+- https://laravel.com/docs/8.x/sail
 
-https://spatie.be/docs/laravel-data/v1/introduction
+- https://spatie.be/docs/laravel-data/v1/introduction
 
-https://docs.laravel-excel.com/3.1/getting-started/
+- https://docs.laravel-excel.com/3.1/getting-started/
 
 
 
